@@ -1,9 +1,25 @@
-# dependencies
-/node_modules
+# Ignore node_modules and dist
+node_modules
+dist/
 
-# debug
+# Ignore logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
-.env
+
+# Ignore dotenv environment variable files (to avoid exposing sensitive information)
+# .env
+.env.development
+.env.development.local
+.env.test.local
+.env.production
+.env.production.local
+.env.local
+
+
+# Ignore editor and OS-specific files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

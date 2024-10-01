@@ -78,6 +78,7 @@ export default (app: Router) => {
           email, password
         );
         if (!token) {
+          logger.error(" 401 Unauthorized Invalid email or password");
           return res.status(401).json({ message: 'Invalid email or password' });
         }
         res.json(token);
